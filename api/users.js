@@ -5,6 +5,7 @@ module.exports = (req, res) => {
             {name: 'Xander', location: 'Valletta'},
         ])
     } else {
-        
+        const { name, location } = req.body
+        res.send({ status: "User Created", name, location })
     }
 }
